@@ -1,0 +1,15 @@
+.btn{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.tileDados{
+    font-size: 20px;
+    padding-left: 10px;
+}
+.contScroll{
+    flex-direction: column;
+}

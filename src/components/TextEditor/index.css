@@ -1,0 +1,16 @@
+.general-editor {
+    border: none;
+    width: 600px;
+}
+.ProseMirror{
+    border: 1px solid rgba(66, 82, 110, 0.25);
+    box-shadow: inset 0px 1px 3px #DDDDDD;
+    border-radius: 10px;
+    margin-left: 20px;
+    height: 150px;
+    width: 600px;
+    overflow-y:scroll;
+}
+
+
+
