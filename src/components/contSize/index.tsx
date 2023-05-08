@@ -3,7 +3,7 @@ import Patient from '@/icons/paciente.svg'
 import Nascimento from '@/icons/nascimento.svg'
 import Profission from '@/icons/profissao.svg'
 import Schooll from '@/icons/escolaridade.svg'
-import LapisD from '@/icons/lapisD.svg'
+import LapisD from '@/icons/LapisD.svg'
 import { CardsRight } from '../CardsRight/cardsRight'
 import { useEffect, useState } from 'react'
 import Modal from "@mui/material/Modal/Modal"
