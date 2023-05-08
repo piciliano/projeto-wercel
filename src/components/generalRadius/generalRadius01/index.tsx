@@ -1,5 +1,6 @@
 import { Conditions, ConditionsTwo } from '@/utils/conditions'
 import * as C from './style'
+import React from 'react'
 
 export const GeneralInputs = () => {
     return(
@@ -7,9 +8,9 @@ export const GeneralInputs = () => {
             <C.Container>
                 <C.ContainerCollum>
                     {Conditions.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
-                        <C.DivBase>
+                       <React.Fragment key={item.id}>
+                        <C.Text >{item.title}</C.Text>
+                        <C.DivBase >
                         <C.InputRadius id='radio' type='radio'></C.InputRadius>
                         <C.Label htmlFor='radio'> Sim </C.Label>
                         </C.DivBase>
@@ -20,13 +21,13 @@ export const GeneralInputs = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </>)}
-                        </>
+                        </React.Fragment>
                     ))}
                 </C.ContainerCollum>
                 <C.ContainerCollum>
                 {ConditionsTwo.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
+                        <React.Fragment key={item.id}>
+                        <C.Text>{item.title}</C.Text>
                         <C.DivBase>
                         <C.InputRadius id='radio' type='radio'></C.InputRadius>
                         <C.Label htmlFor='radio'> Sim </C.Label>
@@ -38,7 +39,7 @@ export const GeneralInputs = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </> )}
-                        </>
+                        </React.Fragment>
                     ))}
                 </C.ContainerCollum>
             </C.Container>

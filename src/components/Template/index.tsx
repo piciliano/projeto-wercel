@@ -3,15 +3,16 @@ import { Normalize } from 'styled-normalize'
 import { BarraF } from '../barra-lateral'
 import { DivArrowButton } from '../buttonsArrow'
 
-export const Template = () => {
 
+export const Template = () => {
   const location = useLocation()
 
   return (
     <div className="App">
       <Normalize />
       <BarraF />
-      {location.pathname !== "/" && <DivArrowButton />}
+      {location.pathname !== '/' && location.pathname
+       !== '/app' && <DivArrowButton />}
       <Outlet />
     </div>
   )

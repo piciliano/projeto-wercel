@@ -1,5 +1,6 @@
 import { Life, LifeTwo } from '@/utils/professionalLife'
 import * as C from '../generalRadius01/style'
+import React from 'react'
 
 export const GeneralInputsThree = () => {
     return(
@@ -7,8 +8,8 @@ export const GeneralInputsThree = () => {
       <C.Container>
         <C.ContainerCollum>
           {Life.map(item => (
-            <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+            <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
               {!item.options && (
                 <>
                   <C.DivBase>
@@ -24,8 +25,8 @@ export const GeneralInputsThree = () => {
               {item.options && (
                 <>
                   {item.options.map((select, index) => (
-                    <C.DivBase>
-                      <C.InputRadius key={index} id="radio" type="radio" value={select}></C.InputRadius>
+                    <C.DivBase key={index}>
+                      <C.InputRadius  id="radio" type="radio" value={select}></C.InputRadius>
                       <C.Label htmlFor="radio"> {select} </C.Label>
                     </C.DivBase>
                   ))}
@@ -37,14 +38,14 @@ export const GeneralInputsThree = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
 
         <C.ContainerCollum>
           {LifeTwo.map(item => (
-              <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+             <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
               {!item.hidden && (
                 <>
                 <C.DivBase>
@@ -60,8 +61,8 @@ export const GeneralInputsThree = () => {
               {item.options && (
                 <>
                   {item.options.map((select, index) => (
-                    <C.DivBase>
-                      <C.InputRadius key={index} id="radio" type="radio" value={select}></C.InputRadius>
+                    <C.DivBase  key={index}>
+                      <C.InputRadius id="radio" type="radio" value={select}></C.InputRadius>
                       <C.Label htmlFor="radio"> {select} </C.Label>
                     </C.DivBase>
                   ))}
@@ -73,7 +74,7 @@ export const GeneralInputsThree = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
       </C.Container>

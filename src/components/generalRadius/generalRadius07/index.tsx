@@ -1,3 +1,4 @@
+import React from 'react'
 import * as C from '../generalRadius01/style'
 import { ActivityTwo, Activty } from '@/utils/activity'
 
@@ -7,8 +8,8 @@ export const GeneralInputsSeven = () => {
             <C.Container>
                 <C.ContainerCollum>
                     {Activty.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
+                        <React.Fragment key={item.id}>
+                        <C.Text >{item.title}</C.Text>
                         {!item.hidden && (
                             <>
                             <C.DivBase>
@@ -25,13 +26,13 @@ export const GeneralInputsSeven = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </>)}
-                        </>
+                        </ React.Fragment>
                     ))}
                 </C.ContainerCollum>
                 <C.ContainerCollum>
                 {ActivityTwo.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
+                        <React.Fragment key={item.id}>
+                        <C.Text >{item.title}</C.Text>
                         {!item.hidden && (
                             <>
                             <C.DivBase>
@@ -47,7 +48,7 @@ export const GeneralInputsSeven = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </> )}
-                        </>
+                        </React.Fragment>
                     ))}
                 </C.ContainerCollum>
             </C.Container>

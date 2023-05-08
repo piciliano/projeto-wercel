@@ -8,7 +8,6 @@ export const Container = styled.div`
     display: flex;
     background-color: #f2f2f2;
     flex-direction: column;
-    
 `
 export const Box = styled.div`
     border-radius: 5px;

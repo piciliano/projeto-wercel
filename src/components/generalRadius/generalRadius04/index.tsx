@@ -1,6 +1,7 @@
 
 import { LifeSchool, LifeSchoolTwo } from '@/utils/schoolLife'
 import * as C from '../generalRadius01/style'
+import React from 'react'
 
 export const GeneralInputsFour = () => {
     return(
@@ -8,7 +9,7 @@ export const GeneralInputsFour = () => {
       <C.Container>
         <C.ContainerCollum>
           {LifeSchool.map(item => (
-            <>
+            <React.Fragment key={item.id}>
               <C.Text key={item.id}>{item.title}</C.Text>
               {!item.options && (
                 <>
@@ -25,8 +26,8 @@ export const GeneralInputsFour = () => {
               {item.options && (
                 <>
                   {item.options.map((select, index) => (
-                    <C.DivBase>
-                      <C.InputRadius key={index} id="radio" type="radio" value={select}></C.InputRadius>
+                    <C.DivBase key={index}>
+                      <C.InputRadius  id="radio" type="radio" value={select}></C.InputRadius>
                       <C.Label htmlFor="radio"> {select} </C.Label>
                     </C.DivBase>
                   ))}
@@ -38,13 +39,13 @@ export const GeneralInputsFour = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
         <C.ContainerCollum>
           {LifeSchoolTwo.map(item => (
-              <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+              <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
                 <>
                 <C.DivBase>
                 <C.InputRadius id="radio" type="radio"></C.InputRadius>
@@ -61,7 +62,7 @@ export const GeneralInputsFour = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
       </C.Container>

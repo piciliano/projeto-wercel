@@ -1,5 +1,6 @@
 import { Condute, ConduteTwo } from '@/utils/condute'
 import * as C from '../generalRadius01/style'
+import React from 'react'
 
 export const GeneralInputsSix = () => {
     return(
@@ -7,8 +8,8 @@ export const GeneralInputsSix = () => {
             <C.Container>
                 <C.ContainerCollum>
                     {Condute.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
+                        <React.Fragment key={item.id}>
+                        <C.Text >{item.title}</C.Text>
                         {!item.hidden && (
                             <>
                             <C.DivBase>
@@ -25,13 +26,13 @@ export const GeneralInputsSix = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </>)}
-                        </>
+                        </React.Fragment>
                     ))}
                 </C.ContainerCollum>
                 <C.ContainerCollum>
                 {ConduteTwo.map(item => (
-                        <>
-                        <C.Text key={item.id}>{item.title}</C.Text>
+                        <React.Fragment key={item.id}>
+                        <C.Text >{item.title}</C.Text>
                         {!item.hidden && (
                             <>
                             <C.DivBase>
@@ -47,7 +48,7 @@ export const GeneralInputsSix = () => {
                         {item.input && ( <> {item.input}
                         <C.InputText/>
                         </> )}
-                        </>
+                        </React.Fragment>
                     ))}
                 </C.ContainerCollum>
             </C.Container>

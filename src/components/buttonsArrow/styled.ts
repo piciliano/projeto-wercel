@@ -10,6 +10,6 @@ export const DivButtonArrow = styled.div`
     align-items: center;
 `
 export const ButtonArrow = styled.img`
-    width: 298px;
+    width: 31%;
     height: 100px;
 `

@@ -1,5 +1,6 @@
 import { Health, HealthTwo } from '@/utils/health'
 import * as C from '../generalRadius01/style'
+import React from 'react'
 
 export const GeneralInputsFive = () => {
   return (
@@ -7,8 +8,8 @@ export const GeneralInputsFive = () => {
       <C.Container>
         <C.ContainerCollum>
           {Health.map(item => (
-            <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+            <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
               {!item.options && (
                 <>
                   <C.DivBase>
@@ -24,8 +25,8 @@ export const GeneralInputsFive = () => {
               {item.options && (
                 <>
                   {item.options.map((select, index) => (
-                    <C.DivBase>
-                      <C.InputRadius key={index} id="radio" type="radio" value={select}></C.InputRadius>
+                    <C.DivBase key={index}>
+                      <C.InputRadius  id="radio" type="radio" value={select}></C.InputRadius>
                       <C.Label htmlFor="radio"> {select} </C.Label>
                     </C.DivBase>
                   ))}
@@ -37,13 +38,13 @@ export const GeneralInputsFive = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
         <C.ContainerCollum>
           {HealthTwo.map(item => (
-              <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+              <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
                 <>
                 <C.DivBase>
                 <C.InputRadius id="radio" type="radio"></C.InputRadius>
@@ -60,7 +61,7 @@ export const GeneralInputsFive = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
       </C.Container>

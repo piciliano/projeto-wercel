@@ -11,7 +11,7 @@ export const LifeSchool = [ {
 },]
 
 export const LifeSchoolTwo = [{
-        id: 4,
+        id: 3,
         title: "21 - Está estudando ?",
         input: "Parou a quanto tempo ?" ,
         

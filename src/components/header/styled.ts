@@ -9,7 +9,7 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-z-index: 9999;
+z-index: 100;
 `
 export const ContLogo = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ export const ContTwo = styled.div`
     font-size: 22px;
     position: absolute;
     left: 80%;
-    bottom:0.5px;
+    bottom:20px;
 `
 export const contLogoOne = styled.div`
     background-color: #f6f6ff;

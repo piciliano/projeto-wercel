@@ -15,16 +15,16 @@ export const Health = [ {
 },]
 
 export const HealthTwo = [{
-        id: 5,
+        id: 4,
         title: "24 - Faz uso de medicamentos?" ,
         input: "Qual (is) ?" ,
     },
     {
-        id: 6,
+        id: 5,
         title: "26 - Sente desmaios, tontura, mal estar, dores de cabeça constantes, crises convulsivas? " ,
     },
     {
-        id: 7,
+        id: 6,
         title: " 28 - Pratica alguma atividade física?" ,
         input: "Quais ?" ,
     }

@@ -1,5 +1,6 @@
 import { History, HistoryTwo } from '@/utils/history'
 import * as C from '../generalRadius01/style'
+import React from 'react'
 
 export const GeneralInputsTwo = () => {
   return (
@@ -7,8 +8,8 @@ export const GeneralInputsTwo = () => {
       <C.Container>
         <C.ContainerCollum>
           {History.map(item => (
-            <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+           <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
               {!item.options && !item.hidden && (
                 <>
                   <C.DivBase>
@@ -24,8 +25,8 @@ export const GeneralInputsTwo = () => {
               {item.options && (
                 <>
                   {item.options.map((select, index) => (
-                    <C.DivBase>
-                      <C.InputRadius key={index} id="radio" type="radio" value={select}></C.InputRadius>
+                    <C.DivBase key={index}>
+                      <C.InputRadius  id="radio" type="radio" value={select}></C.InputRadius>
                       <C.Label htmlFor="radio"> {select} </C.Label>
                     </C.DivBase>
                   ))}
@@ -37,17 +38,16 @@ export const GeneralInputsTwo = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
 
         <C.ContainerCollum>
           {HistoryTwo.map(item => (
-              <>
-              <C.Text key={item.id}>{item.title}</C.Text>
+              <React.Fragment key={item.id}>
+              <C.Text >{item.title}</C.Text>
               {!item.hidden && (
                 <>
-
                 <C.DivBase>
                 <C.InputRadius id="radio" type="radio"></C.InputRadius>
                 <C.Label htmlFor="radio"> Sim </C.Label>
@@ -66,7 +66,7 @@ export const GeneralInputsTwo = () => {
                   <C.InputText />
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </C.ContainerCollum>
       </C.Container>

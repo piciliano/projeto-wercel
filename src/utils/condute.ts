@@ -34,7 +34,7 @@ export const Condute = [ {
     input: "Nota" ,
 },
 {
-    id: 4,
+    id: 8,
     input: "41 - Fale sobre você: 1 ponto positivo e 1 ponto negativo:",
     hidden: "null",
 },]
@@ -70,7 +70,7 @@ export const ConduteTwo = [
     hidden: "null",
 },
 {
-    id: 14,
+    id: 15,
     input: "42 - Sugestão para redução de acidentes no trânsito: " ,
     hidden: "null",
 }]

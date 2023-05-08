@@ -47,8 +47,7 @@ const TextEditor = () => {
       SubScript,
       Highlight,
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
-    ],
-    
+    ], 
   })
 
   return (
