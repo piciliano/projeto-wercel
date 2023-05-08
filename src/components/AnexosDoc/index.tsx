@@ -1,5 +1,5 @@
 import * as C from './style'
-import FileIcon from '../../icons/pdf.svg'
+import FileIcon from '@/icons/pdf.svg'
 
 interface Anexo {
   textFile: string
