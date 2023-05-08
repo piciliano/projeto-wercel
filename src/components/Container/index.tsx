@@ -1,5 +1,5 @@
 import * as C from './style'
-import Lupa from '../../icons/Lupa.svg'
+import Lupa from '@/icons/Lupa.svg'
 import { ContSize } from '../contSize'
 
 export const Container = () => {
