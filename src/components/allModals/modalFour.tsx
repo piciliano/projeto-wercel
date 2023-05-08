@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as C from './style'
 import Modal from '@mui/material/Modal'
 import '../allModals/index.css'
-import Close from '../../icons/close-modal.svg'
+import Close from '@/icons/close-modal.svg'
 import { useNavigate } from 'react-router-dom'
 
 export default function ModalFour() {
